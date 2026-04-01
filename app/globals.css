@@ -1,3 +1,87 @@
+/* ── Neue Haas Grotesk Display ─────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Roman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-RomanItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Mediu.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display';
+  src: url('/fonts/Neue-Haas-Grotesk-Font-Family/NeueHaasDisplay-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ── Tailwind ───────────────────────────────────────────────────────────── */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
