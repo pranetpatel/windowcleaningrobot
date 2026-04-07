@@ -1,4 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
+import NextOperationBanner from "./NextOperationBanner";
+import HomeBuildingSVG from "./HomeBuildingSVG";
 
 const CURRENT_STATUS: "Active" | "Scheduled" | "Offline" = "Scheduled";
 
@@ -23,22 +26,31 @@ const STATUS_CONFIG = {
   },
 };
 
-const NEXT_SCHEDULED_RUN = {
-  date: "Thursday, April 3, 2026",
-  time: "7:00 AM – 11:00 AM",
-  building: "Ivey Spencer Leadership Centre",
-  zone: "South Facade, Floors 3–6",
-};
-
 export default function HomePage() {
   const status = STATUS_CONFIG[CURRENT_STATUS];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-[#4F2D84] text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-          <div className="max-w-3xl">
+      <section className="bg-[#4F2D84] text-white relative overflow-hidden">
+        {/* Right-half image — absolutely positioned so it's truly full-height and flush to the viewport edge */}
+        <div className="absolute inset-y-0 right-0 w-1/2 hidden lg:block">
+          <Image
+            src="/images/hero.png"
+            alt="WinBot cleaning the building facade"
+            fill
+            sizes="50vw"
+            className="object-cover"
+            style={{ objectPosition: "15% 33%" }}
+            priority
+          />
+          {/* Purple tint overlay to blend with brand colour */}
+          <div className="absolute inset-0 bg-[#4F2D84]/40" />
+        </div>
+
+        {/* Text content — constrained to left half on desktop */}
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+          <div className="lg:w-1/2 lg:pr-12">
             <div className="flex items-center gap-3 mb-6">
               <span
                 className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold border ${status.badge}`}
@@ -52,8 +64,7 @@ export default function HomePage() {
               WinBot
             </h1>
             <p className="text-xl sm:text-2xl text-purple-200 mb-8 leading-relaxed">
-              Western University&apos;s automated rooftop window-cleaning robot —
-              keeping campus buildings clear, safe, and looking their best.
+              Western University&apos;s automated rooftop window-cleaning robot, keeping campus buildings clear, safe, and looking their best.
             </p>
             <p className="text-purple-300 text-base mb-10">
               {status.description}
@@ -77,33 +88,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Next Scheduled Run Banner */}
-      <section className="bg-purple-50 border-b border-purple-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-            <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-[#4F2D84] rounded-lg flex items-center justify-center text-white text-2xl">
-                📅
+      <NextOperationBanner />
+
+      {/* Live Building Visualization */}
+      <section className="bg-[#07101e] border-b border-purple-900/40">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex items-center justify-between mb-5">
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse"/>
+                <p className="text-xs font-semibold text-purple-400 uppercase tracking-widest">
+                  System Visualization
+                </p>
               </div>
-            </div>
-            <div className="flex-1">
-              <p className="text-xs font-semibold text-[#4F2D84] uppercase tracking-wide mb-1">
-                Next Scheduled Operation
-              </p>
-              <p className="text-lg font-bold text-gray-900">
-                {NEXT_SCHEDULED_RUN.date} &middot; {NEXT_SCHEDULED_RUN.time}
-              </p>
-              <p className="text-sm text-gray-600">
-                {NEXT_SCHEDULED_RUN.building} — {NEXT_SCHEDULED_RUN.zone}
+              <p className="text-gray-400 text-sm">
+                Amit Chakma Engineering Building (ACEB), South Facade
               </p>
             </div>
-            <Link
-              href="/schedule"
-              className="text-sm font-semibold text-[#4F2D84] hover:underline whitespace-nowrap"
-            >
-              Full schedule →
-            </Link>
+            <p className="text-gray-600 text-xs hidden sm:block">
+              Illustrated demo
+            </p>
           </div>
+          <HomeBuildingSVG />
         </div>
       </section>
 
@@ -116,7 +122,7 @@ export default function HomePage() {
           <InfoCard
             icon="🤖"
             title="What is WinBot?"
-            description="WinBot is an autonomous rail-mounted robot that travels along a rooftop gantry to clean the exterior windows of the Ivey Spencer Leadership Centre using environmentally safe water-fed brushes."
+            description="WinBot is an autonomous rail-mounted robot that rides along a rooftop rail to clean the exterior windows of the Amit Chakma Engineering Building (ACEB) using water-fed brushes."
             link={{ href: "/faq", label: "Read the FAQ" }}
           />
           <InfoCard
@@ -128,7 +134,7 @@ export default function HomePage() {
           <InfoCard
             icon="🗓️"
             title="Operation Schedule"
-            description="WinBot typically operates Tuesday through Thursday mornings between 6:00 AM and 2:00 PM, weather permitting. Night operations occur occasionally for low-disruption maintenance."
+            description="WinBot typically operates Tuesday through Thursday mornings between 6:00 AM and 2:00 PM, weather permitting. Night operations run occasionally during low-traffic periods."
             link={{ href: "/schedule", label: "View schedule" }}
           />
         </div>
@@ -142,7 +148,7 @@ export default function HomePage() {
               <span className="text-green-600 text-xl">🟢</span>
               <p className="text-green-800 font-medium">
                 WinBot is currently active. Please observe all posted clearance
-                zones around the Ivey Spencer Leadership Centre.
+                zones around the Amit Chakma Engineering Building (ACEB).
               </p>
             </div>
           </div>

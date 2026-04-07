@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Safety Information — WinBot",
+  title: "Safety Information | WinBot",
 };
 
 export default function SafetyPage() {
@@ -16,9 +16,7 @@ export default function SafetyPage() {
           WinBot Safety Guidelines
         </h1>
         <p className="text-gray-600 text-lg max-w-3xl">
-          The safety of all students, staff, and visitors is our top priority. Please
-          review the following guidelines before, during, and after WinBot operations at
-          the Ivey Spencer Leadership Centre.
+          The safety of all students, staff, and visitors is our top priority. Please review the following guidelines before, during, and after WinBot operations at the Amit Chakma Engineering Building (ACEB).
         </p>
       </div>
 
@@ -77,7 +75,7 @@ export default function SafetyPage() {
               <span className="text-[#4F2D84] font-bold mt-0.5">•</span>
               <span>
                 <strong>Noise level:</strong> Motor and brush sounds are audible from
-                within 10 metres. The system operates at approximately 65 dB — similar to a
+                within 10 metres. The system operates at approximately 65 dB, similar to a
                 normal conversation.
               </span>
             </li>
@@ -105,19 +103,19 @@ export default function SafetyPage() {
           </p>
           <div className="space-y-3">
             <ClearanceZoneItem
-              zone="Zone A — Exclusion Zone"
+              zone="Zone A: Exclusion Zone"
               distance="0–5 metres from building base"
               colour="bg-red-100 border-red-300 text-red-800"
               description="No access. Barriers in place. Only authorized Facilities Management staff permitted."
             />
             <ClearanceZoneItem
-              zone="Zone B — Caution Zone"
+              zone="Zone B: Caution Zone"
               distance="5–10 metres from building base"
               colour="bg-amber-100 border-amber-300 text-amber-800"
               description="Reduced speed pedestrian zone. Stay alert and avoid lingering. No parking."
             />
             <ClearanceZoneItem
-              zone="Zone C — Awareness Zone"
+              zone="Zone C: Awareness Zone"
               distance="10–15 metres from building base"
               colour="bg-yellow-50 border-yellow-200 text-yellow-800"
               description="Normal access with awareness. Watch for wet ground. No vehicles."

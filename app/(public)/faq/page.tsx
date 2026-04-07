@@ -14,7 +14,7 @@ const FAQS = [
     id: 2,
     question: "How much noise does WinBot make?",
     answer:
-      "WinBot operates at approximately 60–70 decibels at a distance of 5 metres — roughly equivalent to a normal conversation or light traffic. The dominant sounds are from the drive motors and the rotating brushes. Operations are generally scheduled between 6:00 AM and 2:00 PM on weekdays to minimise disruption to lectures and meetings. If noise is particularly noticeable from inside the building, please close the nearest windows or raise it with Facilities Management.",
+      "WinBot operates at approximately 60 to 70 decibels at a distance of 5 metres — roughly equivalent to a normal conversation or light traffic. The dominant sounds are from the drive motors and the rotating brushes. Operations are generally scheduled between 6:00 AM and 2:00 PM on weekdays to reduce disruption to lectures and meetings. If noise is particularly noticeable from inside the building, please close the nearest windows or raise it with Facilities Management.",
   },
   {
     id: 3,
@@ -38,13 +38,13 @@ const FAQS = [
     id: 6,
     question: "Which buildings does WinBot service?",
     answer:
-      "The current WinBot deployment is configured exclusively for the Ivey Spencer Leadership Centre. The rail system is building-specific and cannot be easily relocated. Western Facilities Management is evaluating additional buildings for future deployments, with the Richard Ivey Building and the Thompson Recreation and Athletic Centre being priority candidates. There is no confirmed timeline for expansion at this time.",
+      "The current WinBot deployment is configured for the Amit Chakma Engineering Building (ACEB). The rail system is building-specific and cannot be easily moved. Western Facilities Management is looking at additional buildings for future deployments, but there is no confirmed timeline yet.",
   },
   {
     id: 7,
     question: "How often are windows cleaned?",
     answer:
-      "The full facade of the Ivey Spencer Leadership Centre is cleaned on a quarterly schedule, with touch-up passes performed monthly for high-visibility areas (main entrance facades, conference room windows). A full cleaning cycle — covering all exposed glass surfaces — typically takes 3–5 working days depending on weather delays. The schedule on this site reflects the current active cycle.",
+      "The full facade of the Amit Chakma Engineering Building (ACEB) is cleaned on a quarterly schedule, with touch-up passes done monthly for high-traffic areas. A full cleaning cycle typically takes 3 to 5 working days depending on weather. The schedule on this site reflects the current active cycle.",
   },
   {
     id: 8,
@@ -96,7 +96,7 @@ export default function FAQPage() {
             📞 519-661-3698
           </div>
           <div className="text-purple-300 text-sm">
-            Mon–Fri 7:30 AM – 4:30 PM ET
+            Mon to Fri, 7:30 AM to 4:30 PM ET
             <br />
             <span className="italic">24/7 during active operations</span>
           </div>
